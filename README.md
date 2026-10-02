@@ -1,8 +1,8 @@
-# Kalopsia Bot ♣️
+# Xenfire Bot ♣️
 
-[![Run on Repl.it](https://replit.com/badge/github/Monochromish/Kalopsia-Bot)](https://repl.it/github/Monchromish/Kalopsia-Bot)
+[![Xenfire Bot](https://img.shields.io/badge/Xenfire-Bot-7289DA?style=for-the-badge&logo=discord)](https://github.com/Monochromish/Xenfire-Bot)
 
-Kalopsia Bot is an open-source Discord.js v13 bot with a variety of features, including:
+Xenfire Bot is an open-source Discord.js v13 bot with a variety of features, including:
 
 - Slash commands
 - Staff commands
@@ -13,7 +13,7 @@ Kalopsia Bot is an open-source Discord.js v13 bot with a variety of features, in
 
 ## Prerequisites
 
-To use and develop Kalopsia Bot, you will need:
+To use and develop Xenfire Bot, you will need:
 
 - [Node.js](https://nodejs.org)
 - [Yarn](https://yarnpkg.com) (recommended, although NPM can also be used)
@@ -23,7 +23,7 @@ To use and develop Kalopsia Bot, you will need:
 
 ## Getting Started
 
-To set up Kalopsia Bot on your machine:
+To set up Xenfire Bot on your machine:
 
 1. Clone or download the repository
 2. Modify the `example.env` file and rename it to `.env`
@@ -32,14 +32,14 @@ To set up Kalopsia Bot on your machine:
 
 ## Contributing
 
-We welcome contributions to Kalopsia Bot. If you would like to make changes, please:
+We welcome contributions to Xenfire Bot. If you would like to make changes, please:
 
 1. Test your changes locally
 2. Open a pull request with a clear description of your changes and the reasoning behind them
 
 ## Credits
 
-Kalopsia Bot was written by Monochromish. If you would like to support this project, please consider starring this repository.
+Xenfire Bot was written by Monochromish. If you would like to support this project, please consider starring this repository.
 
 ## Acknowledgments
 

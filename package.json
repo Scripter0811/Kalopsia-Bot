@@ -1,5 +1,5 @@
 {
-  "name": "kalopsia-bot",
+  "name": "xenfire-bot",
   "version": "2.0.0",
   "main": "src/Main.js",
   "scripts": {
@@ -7,7 +7,7 @@
     "dev": "nodemon --watch dist",
     "run": "node ."
   },
-  "repository": "https://github.com/Monochromish/Kalopsia-Bot.git",
+  "repository": "https://github.com/Monochromish/Xenfire-Bot.git",
   "author": "Monochromish",
   "license": "MIT",
   "dependencies": {
