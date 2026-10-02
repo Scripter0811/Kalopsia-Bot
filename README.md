@@ -9,7 +9,7 @@ Xenfire Bot is an open-source Discord.js v13 bot with a variety of features, inc
 - Fun and entertaining commands
 - Utility commands
 - Economy system
-- MongoDB integration
+- Local JSON file storage for economy profiles and moderation warnings
 
 ## Prerequisites
 
@@ -18,7 +18,6 @@ To use and develop Xenfire Bot, you will need:
 - [Node.js](https://nodejs.org)
 - [Yarn](https://yarnpkg.com) (recommended, although NPM can also be used)
 - [Git](https://git-scm.com) (optional, you can also just download the repository directly)
-- [MongoDB](https://www.mongodb.com/atlas/database)
 - Experience with [JavaScript](https://www.learn-js.org) and [Discord.js](https://discord.js.org) (preferably Discord.js v13)
 
 ## Getting Started
@@ -29,6 +28,8 @@ To set up Xenfire Bot on your machine:
 2. Modify the `example.env` file and rename it to `.env`
 3. Install the necessary dependencies using your package manager
 4. Run the bot
+
+Economy profiles and moderation warnings are stored in JSON files under `data/`. No database server is required.
 
 ## Contributing
 

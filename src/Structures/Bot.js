@@ -1,5 +1,4 @@
 const { Client, Collection } = require('discord.js');
-const { connect } = require('mongoose');
 const { search } = require('./Utils');
 const consola = require('consola');
 require('dotenv').config();
@@ -15,16 +14,29 @@ module.exports = class Bot extends Client {
 
   async start() {
     await this.loadOperations();
-    await connect(process.env.MONGO_URI);
     await this.login(process.env.TOKEN);
 
-    if (Config.guildOnly.enabled == true && Config.guildOnly.guildID != '') {
-      try {
-        const guild = this.guilds.cache.get(Config.guildOnly.guildID);
-        await guild.commands.set(this.commands);
-        this.logger.info(`Commands registered in guild with ID ${Config.guildOnly.guildID}`);
-      } catch (e) {
-        this.logger.error(`Failed to register commands in guild with ID ${Config.guildOnly.guildID}\n${e}`);
+    if (this.config.guildOnly.enabled) {
+      const guilds = this.config.guildOnly.guildID
+        ? [this.guilds.cache.get(this.config.guildOnly.guildID)].filter(Boolean)
+        : [...this.guilds.cache.values()];
+      let registeredGuilds = 0;
+
+      for (const guild of guilds) {
+        try {
+          await guild.commands.set(this.commands);
+          registeredGuilds++;
+          this.logger.info(`Commands registered in guild ${guild.name} (${guild.id}).`);
+        } catch (error) {
+          this.logger.error(`Failed to register commands in guild ${guild.id}\n${error}`);
+        }
+      }
+
+      if (registeredGuilds > 0) {
+        await this.application.commands.set([]);
+        this.logger.info('Global commands cleared.');
+      } else {
+        this.logger.error('Commands were not registered: no eligible guilds were found.');
       }
     } else {
       await this.application.commands.set(this.commands);
